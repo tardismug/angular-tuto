@@ -1,0 +1,12 @@
+<h1>Cart</h1>
+<div *ngIf="items" class="list-products">
+  <div *ngFor="let product of items" class="one-product">
+    <div *ngIf="product.name" class="title-product">{{ product.name }}</div>
+    <div *ngIf="product.price" class="price-product">
+      {{ product.price | currency }}
+    </div>
+  </div>
+</div>
+<div class="next-step">
+  <button routerLink="/shipping">Go to shipping prices</button>
+</div>
